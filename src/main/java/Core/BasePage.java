@@ -53,6 +53,10 @@ public class BasePage extends Properties {
         waitForElementToBeVisible(locator);
         return getDriver().findElement(locator).getText();}
 
+    protected String getElementColor(By locator){
+        waitForElementToBeVisible(locator);
+        return getDriver().findElement(locator).getCssValue("background-color");}
+
     protected String getLocator(String locator, String arg) {
         return locator.replace("%ARG%", arg);
     }

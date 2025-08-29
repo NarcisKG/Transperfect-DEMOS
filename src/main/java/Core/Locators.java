@@ -7,7 +7,7 @@ public class Locators {
     //Button selection
 
     public static By clickOnOpenDialog = By.xpath("//div[@class='example-wrapper']//span[text()='Open dialog']");
-    public static By clickOnOpenWindow = By.xpath("//div[@class='example-wrapper']//span[text()='Open window']");
+
     public static By setClickOnButton(String buttonType) {
         String buttonLocator = "//div[@class='example-wrapper']//span[text()='*****']";
         return By.xpath(buttonLocator.replace("*****", (buttonType)));
@@ -21,14 +21,16 @@ public class Locators {
         String buttonYNlocator = "//span[@class='k-button-text'][text()='*****']";
         return By.xpath(buttonYNlocator.replace("*****", (buttonYesNo)));}
 
-    //Dialog box elements
-      public static By dialogBoxContent = By.xpath("//p[text()='Are you sure you want to continue?']");
+    public static By dialogBoxContent = By.xpath("//p[text()='Are you sure you want to continue?']");
 
     //Open window button
+
+    public static By clickOnOpenWindow = By.xpath("//div[@class='example-wrapper']//span[text()='Open window']");
+
     public static By setButtonBarButton(String buttonBar){
         String bBBlocator = "//button[@title='*****']";
         return By.xpath(bBBlocator.replace("*****", (buttonBar)));}
 
-    public static By kWindowTitle = By.xpath("//span[@class='k-window-title ng-star-inserted'][text()='About']");
-    public static By kWindowText = By.xpath("//p[@class='ng-star-inserted'][text()='Additional info']");
+    public static By kWindowTitle = By.xpath("//span[@class='k-window-title'][text()='About']");
+    public static By kWindowText = By.xpath("//div[@class='k-window-content']");
 }

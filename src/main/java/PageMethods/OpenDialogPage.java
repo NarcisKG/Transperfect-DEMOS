@@ -18,6 +18,17 @@ public class OpenDialogPage extends BasePage {
         Assertions.assertEquals(elementButton, actualElementButton, "Button title not as expected");
         return this;}
 
+    public OpenDialogPage verifyElementContent(String dialogContent){
+        String actualDialogContent = getElementText(Locators.dialogBoxContent);
+        Assertions.assertEquals(dialogContent, actualDialogContent, "Dialog Box content not as expected");
+        return this;}
+
+    public OpenDialogPage verifyYesButtonColor(String yesColor){
+        String actualYesColor = getElementColor(Locators.setYesNoButton("Yes"));
+        Assertions.assertEquals(yesColor,actualYesColor);
+        return this;}
+
+
     public OpenDialogPage verifyElementX(String elementX){
         String actualElementX = getElementText(Locators.buttonX);
         Assertions.assertEquals(elementX, actualElementX, "Button X not as expected");
