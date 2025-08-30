@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Test;
 
 public class OpenWindowTest extends HomePage{
 
-    public static final String WIN_TITLE = "About";
-    public static final String WIN_CONT = "Additional info";
-    public static final String WIN_MAX = "Maximize";
-    public static final String WIN_MIN = "Minimize";
+    public static final String WINDOW_TITLE = "About";
+    public static final String WINDOW_CONTENT = "Additional info";
+    public static final String MAXIMIZE = "Maximize";
+    public static final String MINIMIZE = "Minimize";
     public static final String WIN_CLOSE = "Close";
 
 
@@ -24,8 +24,8 @@ public class OpenWindowTest extends HomePage{
         HomePage testOW = new HomePage();
 
         testOW.openWindow().clickOnWindow().
-                verifyWindowTitle(WIN_TITLE).verifyWindowContent(WIN_CONT).
-                maximizeWindow(WIN_MAX);
+                verifyWindowTitle(WINDOW_TITLE).verifyWindowContent(WINDOW_CONTENT).
+                maximizeWindow(MAXIMIZE);
 
     }
 

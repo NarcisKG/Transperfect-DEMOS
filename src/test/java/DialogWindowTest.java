@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 public class DialogWindowTest extends HomePage {
 
-    public static final String DB_ELEMENT_TITLE = "Please confirm";
-    public static final String DB_ELEMENT_X = "Close";
-    public static final String DB_ELEMENT_BY = "Yes";
-    public static final String DB_ELEMENT_BN = "No";
-    public static final String DB_ELEMENT_CNTNT = "Are you sure you want to continue?";
+    public static final String DIALOG_TITLE = "Please confirm";
+    public static final String BUTTON_X = "Close";
+    public static final String BUTTON_YES = "Yes";
+    public static final String BUTTON_NO = "No";
+    public static final String DIALOG_CONTENT = "Are you sure you want to continue?";
 
     @BeforeEach
     public void setup(){
@@ -21,9 +21,9 @@ public class DialogWindowTest extends HomePage {
     public void testDB() {
         HomePage testDB = new HomePage();
 
-        testDB.openDialog().clickOnDialogBox().verifyElementTitle(DB_ELEMENT_TITLE).
-                verifyElementButton(DB_ELEMENT_BY).verifyElementButton(DB_ELEMENT_BN).
-                verifyElementContent(DB_ELEMENT_CNTNT).verifyYesButtonColor("rgba(0, 0, 0, 0)").
+        testDB.openDialog().clickOnDialogBox().verifyElementTitle(DIALOG_TITLE).
+                verifyElementButton(BUTTON_YES).verifyElementButton(BUTTON_NO).
+                verifyElementContent(DIALOG_CONTENT).verifyYesButtonColor("rgba(0, 0, 0, 0)").
                 focusOnX().closeDialog();
     }
 
