@@ -2,7 +2,6 @@ package PageMethods;
 
 import Core.BasePage;
 import Core.Locators;
-import org.xml.sax.Locator;
 
 public class HomePage extends BasePage {
 
@@ -17,6 +16,6 @@ public class HomePage extends BasePage {
         clickOnElement(Locators.clickOnOpenWindow);
         return this;}
     public OpenWindowPage clickOnWindow(){
-        clickOnElement(Locators.kWindowTitle);
+        clickOnElement(Locators.windowTitle);
         return new OpenWindowPage();}
 }

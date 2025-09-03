@@ -7,12 +7,12 @@ import org.junit.jupiter.api.Assertions;
 public class OpenWindowPage extends BasePage {
 
     public OpenWindowPage verifyWindowTitle (String windowTitle){
-        String actualWindowTitle = getElementText(Locators.kWindowTitle);
+        String actualWindowTitle = getElementText(Locators.windowTitle);
         Assertions.assertEquals(windowTitle,actualWindowTitle,"Window Title is not as expected");
         return this;}
 
     public OpenWindowPage verifyWindowContent (String windowContent){
-        String actualWindowContent = getElementText(Locators.kWindowText);
+        String actualWindowContent = getElementText(Locators.windowText);
         Assertions.assertEquals(windowContent, actualWindowContent,"Window Text is not a s expected");
         return this;}
 
